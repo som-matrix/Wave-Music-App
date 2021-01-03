@@ -1,0 +1,68 @@
+.library{
+    position:fixed;
+    top:0;
+    left:0;
+    width:25rem;
+    height:100%;
+    background-color: white;
+    overflow: scroll;
+    box-shadow: 2px 2px 50px rgb(173, 171, 171);
+    transform: translateX(-100%);
+    transition: all .5s ease;
+    opacity: 0;
+
+    h1{
+        padding: 2rem;
+    }
+}
+.library-song{
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: background .5s ease;
+    img{
+      width:30%;
+    }
+    &:hover{
+        background-color: rgb(192, 192, 192);
+    }
+}
+.song-description{
+    padding-left:1rem;
+
+    h2{
+        margin-bottom: 0.5rem;
+    }
+}
+
+// For scrollbar
+*{
+ scrollbar-width: 5px;
+ scrollbar-color:  rgb(148, 147, 147) transparent;
+}
+
+// Support in Google chrome and other browsers
+*::-webkit-scrollbar{
+    width: 5px;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: rgb(148, 147, 147);
+}
+
+.selected{
+    background-color:rgb(221, 221, 221) ;
+}
+.active-library{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+@media screen and (max-width:768px){
+    .library{
+        width: 100%;
+    }
+}
